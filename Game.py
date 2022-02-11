@@ -3,20 +3,6 @@ import os
 import pynput
 import random
 
-
-is_food_touch_snake = True
-
-def generate_food():
-	is_food_touch_snake = True
-	while is_food_touch_snake:
-		food['x'] = random.randint(0, 29)
-		food['y'] = random.randint(0, 14)
-		is_food_touch_snake = False
-		for item in snake:
-			if food['x'] == item['x'] and food['y'] == item['y']:
-				is_food_touch_snake = True
-
-
 def draw():
 	for y in range(15):
 		result = ' '
